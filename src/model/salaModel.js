@@ -30,3 +30,12 @@ function listarSalas() {
 }
 
 module.exports = {listarSalas}
+
+let listarSalas=async()=>{
+    let salas=awaitdb.findAll("salas");
+    return salas;
+}
+
+async function atualizarMensagens(sala){
+    return await db.updateOne("salas", sala,{_id:sala._id});
+}
