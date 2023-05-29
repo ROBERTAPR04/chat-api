@@ -19,8 +19,3 @@ async function findAll(collection) {
 
 module.exports = { findAll }
 
-let findAll= async(collection)=>{
-    const db=awaitconnect();
-    return await
-    db.collection(collection).find().toArray();
-}
